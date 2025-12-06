@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ai-feature-builder.dev/schema.json",
+  "anthropicApiKey": "env:ANTHROPIC_API_KEY",
+  "githubToken": "env:GITHUB_TOKEN",
+  "baseBranch": "dev",
+  "branchPrefix": "feature",
+  "autoCreatePR": false,
+  "autoGenerateTests": true,
+  "testGenerator": "ai-test-generator",
+  "rollbackOnFailure": true,
+  "validateCode": true,
+  "maxFileSize": 100000,
+  "excludePatterns": [
+    "node_modules/**",
+    "dist/**",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "ai": {
+    "model": "claude-3-5-sonnet-20241022",
+    "temperature": 0.3,
+    "maxTokens": 8192
+  }
+}
+
